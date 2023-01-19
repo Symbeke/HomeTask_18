@@ -1,0 +1,16 @@
+const row = 2;
+const col = 3;
+let val = Math.floor((1 + Math.random()) * 0x1000).toString(16).substring(1);
+const constructArray = (row, col, val) => {
+   const res = [];
+   for(let i = 0; i < row; i++){
+      for(let j = 0; j < col; j++){
+         if(!res[i]){
+            res[i] = [];
+         };
+         res[i][j] = val;
+      };
+   };
+   return res;
+};
+console.log(constructArray(row, col, val));
